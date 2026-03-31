@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #123047;
+  background: #f9f6ef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brand-cream text-brand-ink font-sans antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(143, 214, 202, 0.5), transparent 25%),
+    radial-gradient(circle at top right, rgba(243, 230, 198, 0.9), transparent 28%),
+    linear-gradient(135deg, #fcfaf5 0%, #f7efe0 45%, #f3f7f3 100%);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(18, 48, 71, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(29, 95, 132, 0.35);
+  border-radius: 9999px;
+}
+
+.glass-card {
+  @apply rounded-[28px] border border-white/60 bg-white/80 shadow-soft backdrop-blur;
+}
+
+.section-title {
+  @apply font-display text-3xl font-bold tracking-tight text-brand-ink md:text-4xl;
+}
+
+.section-copy {
+  @apply max-w-2xl text-sm leading-7 text-brand-ink/70 md:text-base;
+}
